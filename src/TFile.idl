@@ -1,0 +1,14 @@
+module corba
+{
+    typedef sequence<octet> MyData;
+    typedef sequence<string> MyList;
+    interface TFile
+    {
+        /* fileData为服务端返回的流 */
+        boolean download(in string fileName,out MyData fileData);
+        /* fileData为客户端输入的流 */
+        boolean upload(in string fileName,in MyData fileData);
+        /* 服务器端所有可下载的文件名 */
+        void listAllFile(out MyList allFileNames);
+    };
+};

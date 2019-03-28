@@ -1,0 +1,13 @@
+- 编写IDL接口文件
+
+- 编译IDL接口文件  idlj -fall XXX.idl [-td] <outputdir>
+idlj -td F:\Java代码\JavaCorbaTest\src\client -fclient  TFile.idl
+idlj -td F:\Java代码\JavaCorbaTest\src\server -fserver  TFile.idl
+
+
+- 实现远程对象
+- 实现服务器程序
+- 实现客户端晨曦
+- 编译程序
+- 运行程序 （打开orbd）
+start orbd -ORBInitialPort 1050 -ORBInitialHost localhost
